@@ -1,3 +1,647 @@
-ICLR 2024 Workshop on Reliable and Responsible Foundation Models
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="iclr-r2fm.github.io/favicon.ico?">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pre-training Workshop at ICML 2022">
 
-Under Construction
+
+    <title>Pre-training: Perspectives, Pitfalls, and Paths Forward </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./files_new/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./files_new/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="./files_new/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./files_new/css" rel="stylesheet" type="text/css">
+    <link href="./files_new/css(1)" rel="stylesheet" type="text/css">
+    <link href="./files_new/css(2)" rel="stylesheet" type="text/css">
+    <link href="./files_new/css(3)" rel="stylesheet" type="text/css">
+    <link href="./files_new/css2" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--<ul class="nav navbar-nav navbar-middle">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+
+                    </ul>-->
+                    <ul class="nav navbar-nav navbar-middle">
+                        <li class="hidden active">
+                            <a href="iclr-r2fm.github.io/index.html#page-top"></a>
+                        </li>
+
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#" style="left: -80px; font-size:22px;">ICLR 2024 Workshop on Reliable and Responsible Foundation Models</a>
+                        </li>
+                        <li>
+                            <a style="padding-left: 20px;"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#introduction">Overview</a>
+                        </li>
+
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#call">Call for Papers</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#dates">Important Dates</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#program">Schedule</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#speaker">Invited Speakers</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="iclr-r2fm.github.io/index.html#organization">Organizers</a>
+                        </li>
+                        <li>
+                        <!--<li>
+                            <a class="page-scroll" href="#contactt">Contact</a>
+                        </li>-->
+                        </li><li>
+
+                            <!-- <li>
+                        <a class="buttom" href="index_2020.html">TSW 2020</a>
+                    </li> -->
+
+                    </li></ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+    </div></nav>
+
+    <!-- Header -->
+    <header>
+        <style>
+            header {
+                background-image: url(img/bggg.jpg);
+                color: #fff
+            }
+        </style>
+        <div class="container">
+            <br>
+            
+           
+            <div class="intro-text">
+                <div class="intro-lead-in">ICLR 2024 Workshop on</div>
+                <br>
+                <div class="intro-heading">Reliable and Responsible Foundation Models</div>
+                <br>
+            <br>
+
+                <div class="intro-lead-in">May 11, 2024</div>
+                <br>
+                <div class="intro-lead-in">The workshop will be held in a hybrid format.</div>
+                <!-- <div class="intro-lead-in"> Time Series Workshop @ <a href="https://icml.cc/Conferences/2019"
+                        target=_blank>ICML 2019</a></br>June 14, 2019. Long Beach, USA</div> -->
+                <!--a href="#call" target=_blank class="page-scroll btn btn-xl">Submit a Paper</a-->
+            </div>
+        </div>
+    </header>
+    <br><br><br><br>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Overview</h2>
+                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                </div>
+            </div>
+            <div class="row text-justify">
+                <div class="col-md-12">
+                    <p class="large text-muted">
+In the era of AI-driven transformations, foundation models (FMs), like large-scale language and vision models, have become pivotal in various applications, from natural language processing to computer vision. These models, with their immense capabilities, offer a plethora of benefits but also introduce challenges related to reliability, transparency, and ethics. The workshop on reliable and responsible FMs (R2-FM) delves into the urgent need to ensure that such models are trustworthy and aligned with human values. The significance of this topic cannot be overstated, as the real-world implications of these models impact everything from daily information access to critical decision-making in fields like medicine and finance. Stakeholders, from developers to end-users, care deeply about this because the responsible design, deployment, and oversight of these models dictate not only the success of AI solutions but also the preservation of societal norms, equity, and fairness. Some of the fundamental questions that this workshop aims to address are:                    </p>
+                    <br>
+                    <ul class="large text-muted" ,="" style="float:left; width: 100%"> 
+                    <li>How can we identify and characterize unreliable and irresponsible behaviors in FMs? Topics include susceptibility to spurious features, prompt sensitivity, lack of self-consistency, and issues of nonfactuality or “hallucinations”</li>
+                    <li>How should we assess the potentially harmful capabilities of FMs and quantify their societal impact? For example, how can we predict the consequences of misuse of highly capable large language models?</li>
+                    <li>How can we pinpoint and understand the causes behind known or emerging sources of FM unreliability? This may involve examining training data, objectives, architectural design, learned weights, or other facets.</li><li>What principles or guidelines should inform the design of the next generation of FMs to ensure they are both reliable and responsible?</li><li>Can we establish theoretical frameworks that guarantee the reliability and responsibility of FMs?</li><li>In practical applications, how might we leverage domain-specific knowledge to guide FMs towards improved reliability and responsibility across diverse areas, such as drug discovery, education, or clinical health?</li></ul><br>
+                    <p></p><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- call for papers -->
+    <!-- <section id="call" class="bg-mid-gray"> -->
+    <section id="call">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Call for Papers</h2>
+
+                    <div class="row text-justify">
+                        <div class="col-md-12">
+
+
+                            <p class="large text-muted">We invite submissions from researchers in the fields of reliability and responsibility pertaining to foundation models. Additionally, we welcome contributions from scholars in the natural sciences (such as physics, chemistry, and biology) and social sciences (including pedagogy and sociology) that necessitate the use of reliable and responsible foundation models In summary, our topics of interest include, but are not limited to:</p>
+
+                            <ul class="large text-muted" style="float:left; width: 100%">
+                                <li>Theoretical foundations of FMs and related domains</li>
+                                <li>Empirical investigations into the reliability and responsibility of various FMs</li>
+                                <li>In-depth discussions exploring new dimensions of foundation model reliability and responsibility</li>
+                                <li>Interventions during pre-training to enhance the reliability and responsibility of FMs</li>
+                                <li>Innovations in fine-tuning processes to bolster the reliability and responsibility of FMs</li>
+                            <li>Discussions on aligning models with potentially superhuman capabilities to human values</li><li>Benchmark methodologies for assessing the reliability and responsibility of FMs</li><li>Issues of reliability and responsibility of FMs in broad applications</li></ul>
+                            <p class="large text-muted"><mybold>Submission URL:</mybold> &nbsp; <a href="https://openreview.net/group?id=ICLR.cc/2024/Workshop/R2-FM">https://openreview.net/group?id=ICLR.cc/2024/Workshop/R2-FM
+</a></p>
+                            <p class="large text-muted"><mybold>Format:</mybold> &nbsp;All submissions must be in PDF format. Submissions are limited to <b>four</b> content pages, including all figures and tables; unlimited additional pages containing references and supplementary materials are allowed. Reviewers may choose to read the supplementary materials but will not be required to. <b>Camera-ready versions may go up to five content pages.</b>
+                            </p>
+                            <p class="large text-muted"><mybold>Style file:</mybold> &nbsp; You must format your submission using the ICLR 2024 LaTeX style file. For your convenience, we have modified the main conference style file to refer to the R2-FM workshop: <a href="iclr_r2fm.sty">iclr_r2fm.sty</a>. Please include the references and supplementary materials in the same PDF as the main paper. The maximum file size for submissions is 50MB. Submissions that violate the ICLR style (e.g., by decreasing margins or font sizes) or page limits may be rejected without further review.
+                            </p>
+                            <p class="large text-muted"><mybold>Dual-submission policy:</mybold> &nbsp;We welcome ongoing and unpublished work. We will also accept papers that are under review at the time of submission, or that have been recently accepted without published proceedings.
+                            </p>
+                            <p class="large text-muted"><mybold>Non-archival:</mybold> &nbsp;The workshop is a non-archival venue and will not have official proceedings. Workshop submissions can be subsequently or concurrently submitted to other venues.
+                            </p>
+                            <p class="large text-muted"><mybold>Visibility:</mybold> &nbsp;Submissions and reviews will not be public. Only accepted papers will be made public.
+                            </p>
+                            <p class="large text-muted">For any questions, please contact us at <a href="mailto:r2fm2024@googlegroups.com">r2fm2024@googlegroups.com</a>.
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+    </div></div></section>
+    
+
+    <!-- Dates Section -->
+    <section id="dates">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Important Dates</h2>
+                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-4 text-left">
+                    &nbsp;
+                </div>
+                <div class="row text-justify ">
+                    <div class="col-md-8">
+                        <ul style="float:left; width: 100%">
+                            <p class="large text-muted">
+                                <b>Submission deadline:</b> February 3, 2024, AOE
+                            </p>
+                            <p class="large text-muted">
+                                <b>Notification to authors:</b> March 3, 2024, AOE
+                            </p>
+                            
+                            <p class="large text-muted">
+                                <b>Final workshop program, camera-ready deadline:</b> April 3, 2024, AOE                           </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program Section -->
+    <section id="program">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Schedule</h2>
+                    <!-- <h3 class="section-subheading text-muted">
+                        Long Beach Convention Center, Long Beach <br>
+                        8:45 am - 6:05 pm <br>
+                        June 14, 2019<br>
+                    </h3> -->
+                </div>
+            </div>
+            <p class="large text-muted">
+            This is the tentative schedule of the workshop. All slots are provided in Central European Time (CET). 
+            </p>
+            <div id="schedule">
+                <div class="container w">
+                    <h3>Morning Session</h3> <br>
+                    <div class="row centered">
+                        <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td> 08:50 - 09:00</td>
+                                    <td>Introduction and opening remarks</td>
+                                </tr>
+                            <tr>
+                                    <td>09:00 - 09:30 </td>
+                                    <td>Invited Talk 1</td>
+                                </tr><tr>
+                                    <td>09:30 - 10:00 </td>
+                                    <td>Invited Talk 2</td>
+                                </tr><tr>
+                                    <td>10:00 - 10:15</td>
+                                    <td>Contributed Talk 1</td>
+                                </tr><tr>
+                                    <td>10:15 - 11:15 </td>
+                                    <td>Poster Session 1</td>
+                                </tr><tr>
+                                    <td>11:15 - 11:45 </td>
+                                    <td>Invited Talk 3</td>
+                                </tr><tr>
+                                    <td>11:45 - 12:15 </td>
+                                    <td>Invited Talk 4</td>
+                                </tr><tr>
+                                    <td>12:15 - 13:30</td>
+                                    <td>Break</td>
+                                </tr></tbody>
+
+                        </table>
+                    </div>
+                    <h3>Afternoon Session</h3> <br>
+                    <div class="row centered">
+                        <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>13:30 - 14:00</td>
+                                    <td>Invited Talk 5</td>
+                                </tr>
+                            <tr>
+                                    <td> 14:00 - 14:30</td>
+                                    <td>Invited Talk 6</td>
+                                </tr><tr>
+                                    <td>14:30 - 14:45</td>
+                                    <td>Contributed Talk 2</td>
+                                </tr><tr>
+                                    <td>14:45 - 15:45</td>
+                                    <td>Poster Session 2</td>
+                                </tr><tr>
+                                    <td>15:45 - 16:15</td>
+                                    <td>Invited Talk 7</td>
+                                </tr><tr>
+                                    <td>16:15 - 16:30</td>
+                                    <td>Contributed Talk 3</td>
+                                </tr><tr>
+                                    <td>16:30 - 17:00</td>
+                                    <td>Invited Talk 8</td>
+                                </tr><tr>
+                                    <td>17:00 - 18:00</td>
+                                    <td>Panel discussion</td>
+                                </tr></tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-lg-1 text-left">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+    </div></section>
+
+    <!-- Speaker Section -->
+    <section id="speaker">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Invited Speakers</h2>
+                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="row row-centered ">
+                <div class="col-sm-2">
+                    <div class="team-member">
+                        <img src="./files_new/AW.jpg" height="150" width="150" class="img-responsive img-circle">
+                        <a href="https://cims.nyu.edu/~andrewgw/">
+                            <h4>Andrew Wilson</h4>
+                        </a>
+                        <p class="text-muted">New York University</p>
+                    </div>
+                </div>
+
+                <div class="row row-centered ">
+                    <div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./files_new/LW.jpeg" height="150" width="150" class="img-responsive img-circle">
+                            <a href="https://lilianweng.github.io/">
+                                <h4>Lilian Weng</h4>
+                            </a>
+                            <p class="text-muted">OpenAI</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-centered ">
+                        <div class="col-sm-2">
+                            <div class="team-member">
+                                <img src="./files_new/DZ.jpeg" height="150" width="150" class="img-responsive img-circle">
+                                <a href="https://dennyzhou.github.io/">
+                                    <h4>Denny Zhou</h4>
+                                </a>
+                                <p class="text-muted">Google DeepMind</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row row-centered ">
+                            <div class="col-sm-2">
+                                <div class="team-member">
+                                    <img src="./files_new/WS.jpg" height="150" width="150" class="img-responsive img-circle">
+                                    <a href="https://www.weijie-su.com/">
+                                        <h4>Weijie Su</h4>
+                                    </a>
+                                    <p class="text-muted">University of Pennsylvania</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row row-centered ">
+                                <div class="col-sm-2">
+                                    <div class="team-member">
+                                        <img src="./files_new/BK.png" height="150" width="150" class="img-responsive img-circle">
+                                        <a href="https://beenkim.github.io/">
+                                            <h4>Been Kim</h4>
+                                        </a>
+                                        <p class="text-muted">Google DeepMind</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="container">
+                                <!-- <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2 class="section-heading">Workshop Organizers</h2>
+                                    </div>
+                                </div> -->
+                                <br>
+                                <br>
+                                             <div class="row row-centered ">
+                                                <div class="col-sm-2">
+                                                    <div class="team-member">
+                                                        <img src="./files_new/NP.jpg" height="150" width="150" class="img-responsive img-circle">
+                                                        <a href="https://www.papernot.fr/">
+                                                            <h4>Nicolas Papernot</h4>
+                                                        </a>
+                                                        <p class="text-muted">University of Toronto</p>
+                                                    </div>
+                                                </div>
+                                                 
+                                                    <div class="row row-centered ">
+                                                        <div class="col-sm-2">
+                                                            <div class="team-member">
+                                                                <img src="./files_new/MGP.jpg" height="150" width="150" class="img-responsive img-circle">
+                                                                <a href="https://mega002.github.io/">
+                                                                    <h4>Mor Geva Pipek</h4>
+                                                                </a>
+                                                                <p class="text-muted">Tel Aviv University</p>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row row-centered ">
+                                                            <div class="col-sm-2">
+                                                                <div class="team-member">
+                                                                    <img src="./files_new/JZ.jpg" height="150" width="150" class="img-responsive img-circle">
+                                                                    <a href="https://www.james-zou.com/">
+                                                                        <h4>James Zou</h4>
+                                                                    </a>
+                                                                    <p class="text-muted">Stanford University</p>
+                                                                </div>
+                                                            </div>           
+                                                    <div class="col-sm-2">
+                                                                
+                                                            </div></div>
+                                                </div>
+
+    </div></div></div></div></div></div></div></section>
+
+
+    <section id="organization">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Workshop Organizers</h2>
+                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row row-centered ">
+                <div class="col-sm-2">
+                    <div class="team-member">
+                        <img src="./files_new/Huaxiu_Yao.jpg" height="150" width="150" class="img-responsive img-circle">
+                        <a href="https://huaxiuyao.mystrikingly.com/">
+                            <h4>Huaxiu Yao</h4>
+                        </a>
+                        <p class="text-muted">UNC-Chapel Hill</p>
+                    </div>
+                </div>
+
+                <div class="row row-centered ">
+                    <div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./files_new/MB.png" height="150" width="150" class="img-responsive img-circle">
+                            <a href="https://www.cs.unc.edu/~mbansal/">
+                                <h4>Mohit Bansal</h4>
+                            </a>
+                            <p class="text-muted">UNC-Chapel Hill</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-centered ">
+                        <div class="col-sm-2">
+                            <div class="team-member">
+                                <img src="./files_new/ZD.jpg" height="150" width="150" class="img-responsive img-circle">
+                                <a href="https://www.zhundeng.org/">
+                                    <h4>Zhun Deng</h4>
+                                </a>
+                                <p class="text-muted">Columbia University</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row row-centered ">
+                            <div class="col-sm-2">
+                                <div class="team-member">
+                                    <img src="./files_new/PI.jpeg" height="150" width="150" class="img-responsive img-circle">
+                                    <a href="https://izmailovpavel.github.io/">
+                                        <h4>Pavel Izmailov </h4>
+                                    </a>
+                                    <p class="text-muted">OpenAI &amp; New York University</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row row-centered ">
+                                <div class="col-sm-2">
+                                    <div class="team-member">
+                                        <img src="./files_new/HH.jpg" height="150" width="150" class="img-responsive img-circle">
+                                        <a href="https://hhexiy.github.io/">
+                                            <h4>He He</h4>
+                                        </a>
+                                        <p class="text-muted">New York University</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <!-- <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2 class="section-heading">Workshop Organizers</h2>
+                                    </div>
+                                </div> -->
+                                <br>
+                                <br>
+                                <br>
+
+
+                                <div class="row row-centered ">
+                                    <div class="col-sm-2">
+                                        <div class="team-member">
+                                            <img src="./files_new/PWK.jpg" height="150" width="150" class="img-responsive img-circle">
+                                            <a href="https://koh.pw/">
+                                                <h4>Pang Wei Koh</h4>
+                                            </a>
+                                            <p class="text-muted">University of Washington</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-centered ">
+                                        <div class="col-sm-2">
+                                            <div class="team-member">
+                                                <img src="./files_new/EM.png" height="150" width="150" class="img-responsive img-circle">
+                                                <a href="https://ericmitchell.ai/">
+                                                    <h4>Eric Mitchell</h4>
+                                                </a>
+                                                <p class="text-muted">Stanford University</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row row-centered ">
+                                            <div class="col-sm-2">
+                                                <div class="team-member">
+                                                    <img src="./files_new/CX.jpg" height="150" width="150" class="img-responsive img-circle">
+                                                    <a href="https://cihangxie.github.io/">
+                                                        <h4>Cihang Xie</h4>
+                                                    </a>
+                                                    <p class="text-muted">University of California Santa Cruz</p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row row-centered ">
+                                                <div class="col-sm-2">
+                                                    <div class="team-member">
+                                                        <img src="./files_new/Chelsea_Finn.jpeg" height="150" width="150" class="img-responsive img-circle">
+                                                        <a href="https://ai.stanford.edu/~cbfinn/">
+                                                            <h4>Chelsea Finn</h4>
+                                                        </a>
+                                                        <p class="text-muted">Stanford University</p>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+    <div class="container">
+            <div class="row">
+                
+            </div>
+    </div>
+    </div></div></div></div></div></div></div></div></div></section>
+
+
+
+    <!-- <section id="contactt">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2 class="section-heading">Contact</h2>
+                                            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                                            <p class="large text-muted">
+
+                                                Please contact if you have any questions.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+    </section>-->
+
+
+
+
+
+
+<!--     <section id="contact">
+        <br class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading">Sponsored by</h3>
+            </div>
+        </div>
+        <div class="center">
+            <center>
+            <a >
+                <img src="img/logo2x.png" class="center" alt="" height="120" usemap="#planetmap">
+                <map name="planetmap">  
+                     
+                   <area shape="rect" coords="0,0,250,250" alt="Sun" href="https://realai.ai">  
+                    
+                 </map>  
+            </a>
+                
+            </center>
+        </div> -->
+
+
+
+        <!-- </div> -->
+    <!-- </section> -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="./files_new/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./files_new/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./files_new/jquery.easing.min.js"></script>
+    <script src="./files_new/classie.js"></script>
+    <script src="./files_new/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="./files_new/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./files_new/agency.js"></script>
+
+
+
+
+</body></html>
