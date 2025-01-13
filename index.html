@@ -56,8 +56,8 @@
                         </li>
 
                         <li>
-                            <a class="page-scroll" href="#"
-                                style="left: -80px; font-size:22px;">The 2nd Workshop on Foundation Models in the
+                            <a class="page-scroll" href="#" style="left: -80px; font-size:22px;">The 2nd Workshop on
+                                Foundation Models in the
                                 Wild</a>
                         </li>
                         <li>
@@ -65,22 +65,16 @@
                         </li>
 
                         <li>
-                            <a class="page-scroll"
-                                href="#news">News</a>
+                            <a class="page-scroll" href="#news">News</a>
                         </li>
 
                         <li>
-                            <a class="page-scroll"
-                                href="#introduction">About</a>
+                            <a class="page-scroll" href="#introduction">About</a>
                         </li>
 
                         <li>
                             <a class="page-scroll" href="#call">Call for
                                 Papers</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#dates">Important
-                                Dates</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#program">Schedule</a>
@@ -90,8 +84,7 @@
                                 Speakers</a>
                         </li>
                         <li>
-                            <a class="page-scroll"
-                                href="#organization">Organizers</a>
+                            <a class="page-scroll" href="#organization">Organizers</a>
                         </li>
                         <li>
                             <!--<li>
@@ -145,7 +138,8 @@
                 /* Place content above the overlay */
             }
 
-            .intro-heading, .intro-lead-in {
+            .intro-heading,
+            .intro-lead-in {
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
 
@@ -161,17 +155,28 @@
                 margin-bottom: 15px;
             }
 
+            header {
+                padding: 0px 0 0px 0;
+                /* Increase top padding */
+            }
+
+            .buttons {
+                margin-top: 0px;
+                position: relative;
+                z-index: 3;
+                /* Ensure button stays above overlay */
+            }
+
             .btn {
-                display: inline-block;
-                margin: 10px 5px;
+                margin: 15px 5px;
                 padding: 12px 24px;
-                font-size: 16px;
                 color: #fff;
                 background-color: rgba(255, 255, 255, 0.15);
                 border: 2px solid rgba(255, 255, 255, 0.8);
                 border-radius: 5px;
                 text-decoration: none;
                 transition: all 0.3s ease;
+                display: inline-block;
                 backdrop-filter: blur(5px);
             }
 
@@ -180,18 +185,49 @@
                 transform: translateY(-2px);
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
+
+            section {
+                position: relative;
+                padding: 40px 0;
+                /* Reduce padding from default */
+                margin: 0;
+            }
+
+            /* Add horizontal line between sections */
+            section:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                right: 0%;
+                height: 1px;
+                background: #e0e0e0;
+            }
+
+            /* Reduce space between section heading and content */
+            .section-heading {
+                margin-bottom: 20px !important;
+            }
+
+            /* Adjust spacing in specific sections */
+            #news,
+            #introduction,
+            #call,
+            #dates,
+            #program,
+            #speaker,
+            #organization {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
         </style>
         <div class="container">
-            <br>
             <div class="intro-text">
                 <div class="intro-heading">
                     <div>ICLR 2025 Workshop on</div>
                     <div>Foundation Models in the Wild</div>
                 </div>
-                <br>
-                <br>
                 <div class="intro-lead-in">April 27/28, 2025</div>
-                <br>
                 <div class="intro-lead-in">The workshop will be held in a hybrid format.</div>
             </div>
             <div class="buttons">
@@ -215,7 +251,7 @@
                     <p class="large text-muted">
                     <ul class="large text-muted" ,="" style="float:left; width: 100%">
                         <li>
-                            Started submission at OpenReview: <a
+                            Workshop submission portal open at OpenReview: <a
                                 href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild</a>
                         </li>
                         </p>
@@ -239,32 +275,32 @@
                         margin: 0 auto;
                         padding: 40px 20px;
                     }
-            
+
                     .overview-section .intro-text {
                         font-size: 1.1em;
                         line-height: 1.8;
                         color: #444;
                         margin-bottom: 40px;
                     }
-            
+
                     .overview-section .questions-grid {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: 30px;
                         margin-top: 40px;
                     }
-            
+
                     .overview-section .question-card {
                         background: #f8f9fa;
                         border-radius: 12px;
                         padding: 25px;
                         transition: transform 0.3s ease;
                     }
-            
+
                     .overview-section .question-card:hover {
                         transform: translateY(-5px);
                     }
-            
+
                     .overview-section .question-title {
                         color: #2c5282;
                         font-size: 1.2em;
@@ -273,7 +309,7 @@
                         border-bottom: 2px solid #4299e1;
                         padding-bottom: 8px;
                     }
-            
+
                     .overview-section .question-content {
                         color: #4a5568;
                         line-height: 1.6;
@@ -283,50 +319,60 @@
                     <div class="intro-text">
                         In the era of AI-driven transformations, foundation models (FMs) have become pivotal in various
                         applications, from natural language processing to computer vision. These models, with their
-                        immense capabilities, reshape the future of scientific research and the broader human society, but also introduce
-                        challenges in their in-the-wild deployments. The Workshop on FMs in the wild delves into the urgent
-                        need for these models to be useful when deployed in our societies. The significance of this topic cannot
-                        be overstated, as the real-world implications of these models impact everything from daily information access
-                        to critical decision-making in fields like medicine and finance. Stakeholders, from developers to end-users,
-                        care deeply about this because the successful integration of FMs into in-the-wild frameworks necessitates a
+                        immense capabilities, reshape the future of scientific research and the broader human society,
+                        but also introduce
+                        challenges in their in-the-wild deployments. The Workshop on FMs in the wild delves into the
+                        urgent
+                        need for these models to be useful when deployed in our societies. The significance of this
+                        topic cannot
+                        be overstated, as the real-world implications of these models impact everything from daily
+                        information access
+                        to critical decision-making in fields like medicine and finance. Stakeholders, from developers
+                        to end-users,
+                        care deeply about this because the successful integration of FMs into in-the-wild frameworks
+                        necessitates a
                         careful consideration of many properties, including adaptivity, reliability, efficiency, and
                         reasoning ability.
                     </div>
-            
-                    <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Questions We Aim to Address</h3>
-            
+
+                    <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Problems We Aim to Address</h3>
+
                     <div class="questions-grid">
                         <div class="question-card">
                             <div class="question-title">In-the-wild Adaptation</div>
                             <div class="question-content">
                                 How can we leverage techniques such as Retrieval-Augmented Generation
-                                (RAG), In-context Learning (ICL), or Fine-tuning (FT) to adapt FMs for specific domains, such as
+                                (RAG), In-context Learning (ICL), or Fine-tuning (FT) to adapt FMs for specific domains,
+                                such as
                                 drug discovery, education, or clinical health?
                             </div>
                         </div>
-            
+
                         <div class="question-card">
                             <div class="question-title">Reasoning and Planning</div>
                             <div class="question-content">
                                 How can FMs be enhanced to tackle more complex in-the-wild tasks that
-                                require multi-step reasoning or decision-making, such as multi-hop question answering, mathematical
+                                require multi-step reasoning or decision-making, such as multi-hop question answering,
+                                mathematical
                                 problem-solving, theorem proving, code generation, or robot planning scenarios?
                             </div>
                         </div>
-            
+
                         <div class="question-card">
                             <div class="question-title">Reliability and Responsibility</div>
                             <div class="question-content">
                                 How can FMs work reliably outside their training distribution?
-                                And how can we address issues like hallucination, fairness, ethics, safety and privacy within the society?
+                                And how can we address issues like hallucination, fairness, ethics, safety and privacy
+                                within the society?
                             </div>
                         </div>
-            
+
                         <div class="question-card">
                             <div class="question-title">Practical Limitations in Deployment</div>
                             <div class="question-content">
                                 How can FMs tackle challenges in practical applications,
-                                such as system constraints, memory requirements, response time demands, data acquisition barriers,
+                                such as system constraints, memory requirements, response time demands, data acquisition
+                                barriers,
                                 and computational costs for inference-time scaling and long-context input?
                             </div>
                         </div>
@@ -349,60 +395,89 @@
                         <div class="col-md-12">
 
 
-                            <p class="large text-muted">We invite submissions from researchers in the fields of machine
+                            <p class="large text-muted">
+                                The <b>Workshop on Foundation Models in the Wild@ICLR 2025</b> invite submissions from researchers in the fields of machine
                                 learning pertaining to foundation models and its in-the wild applications. Additionally,
                                 we welcome contributions from scholars in the natural sciences (such as physics,
                                 chemistry, and biology) and social sciences (including pedagogy and sociology) that
-                                necessitate the use of foundation models. In summary, our topics of interest include,
-                                but are not limited to:</p>
+                                necessitate the use of foundation models. </p>
+                    
+                                <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                    <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Key Dates</h1>
+                                    
+                                    <ul class="large text-muted" style="float:left; width: 100%">
+                                        <li style="margin-bottom: 0rem;">
+                                            <span style="font-weight: bold;">Paper Deadline:</span> February 3, 2025 (AoE)
+                                        </li>
+                                        <li style="margin-bottom: 0rem;">
+                                            <span style="font-weight: bold;">Notification:</span> March 5, 2025, (AoE)
+                                        </li>
+                                        <li style="margin-bottom: 0rem;">
+                                            <span style="font-weight: bold;">Camera-ready:</span> March 20, 2025, (AoE)
+                                        </li>
+                                    </ul>
+                                    
+                                    <p style="margin-top: 1.5rem; line-height: 1.5;">
+                                        Deadlines are strict and will not be extended under any circumstances. All deadlines follow the <span style="color: #1d6eb0;">Anywhere on Earth (AoE)</span> timezone.
+                                    </p>
+                                </div>
+
+                                <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                    <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Submission Site</h1>
+
+                                    <p class="large text-muted">
+                                        Submit papers through the Foundation Models in the Wild Workshop Submission Portal on OpenReview (<a
+                                        href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">Workshop Submission Portal
+                                    </a>)
+                                    </p>
+                                <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                    <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Scope</h1>
+
+                                <p class="large text-muted">We welcome contributions across a broad spectrum of topics, including but not limited to:</p>
 
                             <ul class="large text-muted" style="float:left; width: 100%">
-                                <li>Theoretical foundations of FMs in the wild</li>
-                                <li>Empirical investigations into the in-the-wild deployments of various FMs</li>
-                                <li>In-depth discussions exploring new applications of FMs in human society</li>
-                                <li>Interventions during pre-training to enhance the downstream performance of FMs</li>
-                                <li>Innovations in fine-tuning processes to bolster the adaptation of FMs to particular
-                                    domains</li>
-                                <li>Discussions on aligning models with potentially superhuman capabilities to human
-                                    values</li>
-                                <li>Advancements in the efficient fine-tuning and deployment of FMs to specific
-                                    applications</li>
+                                <li>Innovations in techniques for customizing models to individual user preferences, tasks, or domains</li>
+                                <li>Advancements in the reasoning and planning abilities of FMs in complex real-world challenges</li>
+                                <li>Theoretical and empirical investigations into the reliability and responsibility of various FMs</li>
+                                <li>Strategies for overcoming practical limitations (e.g., memory, time, data) of FMs in broad applications</li>
+                                <li>Methods for integrating multiple modalities (e.g., text, images, action) into a unified in-the-wild framework</li>
+                                <li>Discussions on FM agents that perform intricate tasks through interaction with the environment</li>
+                                <li>In-depth discussions exploring the in-the-wild deployments and applications of FMs</li>
                                 <li>Benchmark methodologies for assessing FMs in real-world settings</li>
-                                <li>Issues of adaptivity, reliability and efficiency of FMs in broad applications</li>
                             </ul>
+                            <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Submission Guidelines</h1>
                             <p class="large text-muted">
-                                <mybold>Submission URL:</mybold> &nbsp; <a
-                                    href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild
-                                </a>
-                            </p>
-                            <p class="large text-muted">
-                                <mybold>Format:</mybold> &nbsp;All submissions must be in PDF format. Submissions are
-                                either in tiny paper format (<b>2 pages</b>) or long paper format (<b>6 - 10 pages</b>)
-                                including all figures and tables; unlimited additional pages containing references and
-                                supplementary materials are allowed. Reviewers may choose to read the supplementary
-                                materials but will not be required to.
+                                <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file. We welcome high-quality original papers in the following two tracks:
+                                <ul class="large text-muted" style="float:left; width: 100%">
+                                    <li style="margin-bottom: 0rem;">
+                                        <span style="font-weight: bold;">Tiny papers:</span> between 2 and 4 pages
+                                    </li>
+                                    <li style="margin-bottom: 0rem;">
+                                        <span style="font-weight: bold;">Long Papers:</span> between 6 and 10 pages
+                                    </li>
+                                </ul>
+                                
+                                References and appendices are not included in the page limit, but the main text must be self-contained. Reviewers are not required to read beyond the main text
                             </p>
                             <p class="large text-muted">
                                 <mybold>Style file:</mybold> &nbsp; You must format your submission using the ICLR 2025
                                 LaTeX style file. For your convenience, we have modified the main conference style file
-                                to refer to the FM-WILD workshop: <a href="iclr_fmwild.sty">iclr_fmwild.sty</a>. Please
-                                include the references and supplementary materials in the same PDF as the main paper.
+                                to refer to our workshop: <a href="iclr_fmwild.sty">iclr_fmwild.sty</a>. Please
+                                include the references and supplementary materials in the same PDF.
                                 The maximum file size for submissions is 50MB. Submissions that violate the ICLR style
                                 (e.g., by decreasing margins or font sizes) or page limits may be rejected without
                                 further review.
                             </p>
                             <p class="large text-muted">
-                                <mybold>Dual-submission policy:</mybold> &nbsp;We welcome ongoing and unpublished work.
+                                <mybold>Dual-submission and non-archival policy:</mybold> &nbsp;We welcome ongoing and unpublished work.
                                 We will also accept papers that are under review at the time of submission, or that have
-                                been recently accepted without published proceedings.
-                            </p>
-                            <p class="large text-muted">
-                                <mybold>Non-archival:</mybold> &nbsp;The workshop is a non-archival venue and will not
+                                been recently accepted, , provided they do not breach any dual-submission or anonymity policies of those venues. The workshop is a non-archival venue and will not
                                 have official proceedings. Workshop submissions can be subsequently or concurrently
                                 submitted to other venues.
                             </p>
                             <p class="large text-muted">
-                                <mybold>Visibility:</mybold> &nbsp;Submissions and reviews will not be public. Only
+                                <mybold>Visibility:</mybold> &nbsp; Submissions and reviews will not be public. Only
                                 accepted papers will be made public.
                             </p>
                             <p class="large text-muted">
@@ -415,7 +490,8 @@
                                 to preserve double-blind reviewing. Any papers found to be violating this policy will be
                                 rejected.
                             </p>
-                            <p class="large text-muted">For any questions, please contact us at <a
+                            <p class="large text-muted">
+                                <mybold>Contact:</mybold> &nbsp; For any questions, please contact us at <a
                                     href="mailto:fmwild2025@googlegroups.com">fmwild2025@googlegroups.com</a>.
                             </p>
                             <br>
@@ -427,142 +503,151 @@
         </div>
     </section>
 
-
-    <!-- Dates Section -->
-    <section id="dates">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <h2 class="section-heading">Important Dates</h2>
-                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-lg-4 text-left">
-                    &nbsp;
-                </div>
-                <div class="row text-justify ">
-                    <div class="col-md-8">
-                        <ul style="float:left; width: 100%">
-                            <p class="large text-muted">
-                                <b>Submission deadline: February 3, 2025, AOE
-                            </p>
-                            <p class="large text-muted">
-                                <b>Notification to authors: March 5, 2025, AOE
-                            </p>
-                            <p class="large text-muted">
-                                <b>Camera-ready deadline: March 20, 2025, AOE
-                            </p>
-                            <!-- <p class="large text-muted">
-                                <b>Workshop Date: July 26, 2024, AOE                           </p> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Program Section -->
     <section id="program">
+        <style>
+            /* Scope all styles to the program section */
+            #program {
+                color: #333;
+            }
+
+            .section-heading {
+                text-align: center;
+                color: #333;
+                margin-bottom: 1.5rem;
+            }
+
+            #program .text-muted {
+                color: #666;
+                text-align: center;
+                font-style: italic;
+                margin: 1rem 0 2rem;
+            }
+
+            #program h3 {
+                color: #2c5282;
+                margin: 2rem 0 1rem;
+            }
+
+            #program .table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1rem 0 2rem;
+            }
+
+            #program .table td {
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+            }
+
+            #program .table tr:nth-child(even) {
+                background-color: #f8f9fa;
+            }
+
+            /* Special session highlights */
+            #program .table tr:has(td:contains("Break")) {
+                background-color: #ebf4ff;
+            }
+
+            #program .table tr:has(td:contains("Poster Session")) {
+                background-color: #f0fff4;
+            }
+
+            /* Time column */
+            #program .table td:first-child {
+                width: 140px;
+                font-weight: 500;
+                color: #2d3748;
+            }
+
+            #program .centered {
+                margin: 0 auto;
+            }
+        </style>
         <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <h2 class="section-heading">Schedule</h2>
-                    <!-- <h3 class="section-subheading text-muted">
-                        Long Beach Convention Center, Long Beach <br>
-                        8:45 am - 6:05 pm <br>
-                        June 14, 2019<br>
-                    </h3> -->
-                </div>
-            </div>
-            <p class="large text-muted">
-                This is the tentative schedule of the workshop. All slots are provided in local time.
+            <h2 class="section-heading">Schedule</h2>
+            <p class="text-muted">This is the tentative schedule of the workshop. All slots are provided in local time.
             </p>
+
             <div id="schedule">
-                <div class="container w">
-                    <h3>Morning Session</h3> <br>
-                    <div class="row centered">
-                        <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
-                            <tbody>
-                                <tr>
-                                    <td>08:50 - 09:00</td>
-                                    <td>Introduction and opening remarks</td>
-                                </tr>
-                                <tr>
-                                    <td>09:00 - 09:30 </td>
-                                    <td>Invited Talk 1</td>
-                                </tr>
-                                <tr>
-                                    <td>09:30 - 10:00 </td>
-                                    <td>Invited Talk 2</td>
-                                </tr>
-                                <tr>
-                                    <td>10:00 - 10:15</td>
-                                    <td>Contributed Talk 1</td>
-                                </tr>
-                                <tr>
-                                    <td>10:15 - 11:15 </td>
-                                    <td>Poster Session 1</td>
-                                </tr>
-                                <tr>
-                                    <td>11:15 - 11:45 </td>
-                                    <td>Invited Talk 3</td>
-                                </tr>
-                                <tr>
-                                    <td>11:45 - 12:15 </td>
-                                    <td>Invited Talk 4</td>
-                                </tr>
-                                <tr>
-                                    <td>12:15 - 13:30 </td>
-                                    <td>Break</td>
-                                </tr>
-                            </tbody>
+                <h3>Morning Session</h3>
+                <div class="centered">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>08:50 - 09:00</td>
+                                <td>Introduction and opening remarks</td>
+                            </tr>
+                            <tr>
+                                <td>09:00 - 09:30</td>
+                                <td>Invited Talk 1</td>
+                            </tr>
+                            <tr>
+                                <td>09:30 - 10:00</td>
+                                <td>Invited Talk 2</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 - 10:15</td>
+                                <td>Contributed Talk 1</td>
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:15</td>
+                                <td>Poster Session 1</td>
+                            </tr>
+                            <tr>
+                                <td>11:15 - 11:45</td>
+                                <td>Invited Talk 3</td>
+                            </tr>
+                            <tr>
+                                <td>11:45 - 12:15</td>
+                                <td>Invited Talk 4</td>
+                            </tr>
+                            <tr>
+                                <td>12:15 - 13:30</td>
+                                <td>Break</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                        </table>
-                    </div>
-                    <h3>Afternoon Session</h3> <br>
-                    <div class="row centered">
-                        <table class="table table-striped" border="2" cellpadding="2" cellspacing="2">
-                            <tbody>
-                                <tr>
-                                    <td>13:30 - 14:00</td>
-                                    <td>Invited Talk 5</td>
-                                </tr>
-                                <tr>
-                                    <td>14:00 - 14:30</td>
-                                    <td>Invited Talk 6</td>
-                                </tr>
-                                <tr>
-                                    <td>14:30 - 14:45</td>
-                                    <td>Contributed Talk 2</td>
-                                </tr>
-                                <tr>
-                                    <td>14:45 - 15:45</td>
-                                    <td>Poster Session 2</td>
-                                </tr>
-                                <tr>
-                                    <td>15:45 - 16:15</td>
-                                    <td>Invited Talk 7</td>
-                                </tr>
-                                <tr>
-                                    <td>16:15 - 16:30</td>
-                                    <td>Contributed Talk 3</td>
-                                </tr>
-                                <tr>
-                                    <td>16:30 - 17:00</td>
-                                    <td>Invited Talk 8</td>
-                                </tr>
-                                <tr>
-                                    <td>17:00 - 18:00</td>
-                                    <td>Panel discussion</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="col-lg-1 text-left">
-                        &nbsp;
-                    </div>
+                <h3>Afternoon Session</h3>
+                <div class="centered">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>13:30 - 14:00</td>
+                                <td>Invited Talk 5</td>
+                            </tr>
+                            <tr>
+                                <td>14:00 - 14:30</td>
+                                <td>Invited Talk 6</td>
+                            </tr>
+                            <tr>
+                                <td>14:30 - 14:45</td>
+                                <td>Contributed Talk 2</td>
+                            </tr>
+                            <tr>
+                                <td>14:45 - 15:45</td>
+                                <td>Poster Session 2</td>
+                            </tr>
+                            <tr>
+                                <td>15:45 - 16:15</td>
+                                <td>Invited Talk 7</td>
+                            </tr>
+                            <tr>
+                                <td>16:15 - 16:30</td>
+                                <td>Contributed Talk 3</td>
+                            </tr>
+                            <tr>
+                                <td>16:30 - 17:00</td>
+                                <td>Invited Talk 8</td>
+                            </tr>
+                            <tr>
+                                <td>17:00 - 18:00</td>
+                                <td>Panel discussion</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -570,6 +655,67 @@
 
     <!-- Speaker Section -->
     <section id="speaker">
+        <style>
+            /* Add these styles to your existing style section */
+
+            /* Common container width */
+            #speaker .container,
+            #organization .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            /* Speakers Grid - 4x2 */
+            .speakers-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                width: 100%;
+                padding: 0 40px;
+            }
+
+            .speakers-grid .team-member {
+                text-align: center;
+            }
+
+            .speakers-grid .team-member img {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            /* Organizers Grid - 5x3 */
+            .organizers-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+                width: 100%;
+                padding: 0 40px;
+            }
+
+            .organizers-grid .team-member {
+                text-align: center;
+            }
+
+            .organizers-grid .team-member img {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+
+            /* Keep circular images */
+            .img-circle {
+                border-radius: 50%;
+            }
+
+            /* Remove existing column classes effects for these sections */
+            #speaker .col-sm-3,
+            #organization .col-sm-2 {
+                width: auto;
+                padding: 0;
+            }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 ">
@@ -581,85 +727,69 @@
             <br>
             <br>
 
-            <div class="row row-centered ">
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/AA.jpeg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://www.eas.caltech.edu/people/anima">
-                            <h4>Anima Anandkuma</h4>
-                        </a>
-                        <p class="text-muted">California Institute of Technology</p>
-                    </div>
+            <div class="speakers-grid">
+                <div class="team-member">
+                    <img src="./files_new/AA.jpeg" class="img-responsive img-circle">
+                    <a href="https://www.eas.caltech.edu/people/anima">
+                        <h4>Anima Anandkuma</h4>
+                    </a>
+                    <p class="text-muted">California Institute of Technology</p>
                 </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/XC.jpg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://jungyhuk.github.io/">
-                            <h4>Xinyun Chen</h4>
-                        </a>
-                        <p class="text-muted">Google DeepMind</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/CF.jpeg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://ai.stanford.edu/~cbfinn/">
-                            <h4>Chelsea Finn</h4>
-                        </a>
-                        <p class="text-muted">Stanford University</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/TH.jpg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://thashim.github.io/">
-                            <h4>Tatsunori Hashimoto</h4>
-                        </a>
-                        <p class="text-muted">Stanford University</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row row-centered ">
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/RS.jpg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://www.comp.nus.edu.sg/~reza/">
-                            <h4>Reza Shokri</h4>
-                        </a>
-                        <p class="text-muted">National University of Singapore Microsoft</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/JT.jpeg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://keg.cs.tsinghua.edu.cn/jietang/">
-                            <h4>Jie Tang</h4>
-                        </a>
-                        <p class="text-muted">Tsinghua University</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/YT.jpeg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://yuandong-tian.com/">
-                            <h4>Yuandong Tian</h4>
-                        </a>
-                        <p class="text-muted">Meta AI Research</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./files_new/RV.jpeg" height="200" width="200" class="img-responsive img-circle">
-                        <a href="https://www.grasp.upenn.edu/people/rene-vidal/">
-                            <h4>René Vidal</h4>
-                        </a>
-                        <p class="text-muted">University of Pennsylvania</p>
-                    </div>
-                </div>
-                <div class="col-sm-2">
 
+                <div class="team-member">
+                    <img src="./files_new/XC.jpg" class="img-responsive img-circle">
+                    <a href="https://jungyhuk.github.io/">
+                        <h4>Xinyun Chen</h4>
+                    </a>
+                    <p class="text-muted">Google DeepMind</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/CF.jpeg" class="img-responsive img-circle">
+                    <a href="https://ai.stanford.edu/~cbfinn/">
+                        <h4>Chelsea Finn</h4>
+                    </a>
+                    <p class="text-muted">Stanford University</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/TH.jpg" class="img-responsive img-circle">
+                    <a href="https://thashim.github.io/">
+                        <h4>Tatsunori Hashimoto</h4>
+                    </a>
+                    <p class="text-muted">Stanford University</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/RS.jpg" class="img-responsive img-circle">
+                    <a href="https://www.comp.nus.edu.sg/~reza/">
+                        <h4>Reza Shokri</h4>
+                    </a>
+                    <p class="text-muted">National University of Singapore Microsoft</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/JT.jpeg" class="img-responsive img-circle">
+                    <a href="https://keg.cs.tsinghua.edu.cn/jietang/">
+                        <h4>Jie Tang</h4>
+                    </a>
+                    <p class="text-muted">Tsinghua University</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/YT.jpeg" class="img-responsive img-circle">
+                    <a href="https://yuandong-tian.com/">
+                        <h4>Yuandong Tian</h4>
+                    </a>
+                    <p class="text-muted">Meta AI Research</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/RV.jpeg" class="img-responsive img-circle">
+                    <a href="https://www.grasp.upenn.edu/people/rene-vidal/">
+                        <h4>René Vidal</h4>
+                    </a>
+                    <p class="text-muted">University of Pennsylvania</p>
                 </div>
             </div>
         </div>
@@ -667,9 +797,6 @@
 
 
 
-        </div>
-        </div>
-        </div>
         </div>
         </div>
         </div>
@@ -688,172 +815,125 @@
             <br>
             <br>
             <br>
-            <style>
-                /* 移除原来的br标签间距，改用margin控制 */
-                .row-centered {
-                    margin-bottom: 10px;
-                    /* 减少行之间的距离 */
-                }
-
-                .team-member {
-                    text-align: center;
-                    margin-bottom: 15px;
-                    /* 减少每个成员卡片的底部间距 */
-                }
-
-                /* 移除多余的间距 */
-                .container br {
-                    display: none;
-                }
-            </style>
-            <div class="row row-centered ">
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/XY.png" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://xinyuyang.me/">
-                            <h4>Xinyu Yang</h4>
-                        </a>
-                        <p class="text-muted">Carnegie Mellon University</p>
-                    </div>
+            <div class="organizers-grid">
+                <div class="team-member">
+                    <img src="./files_new/XY.jpeg" class="img-responsive img-circle">
+                    <a href="https://xinyuyang.me/">
+                        <h4>Xinyu Yang</h4>
+                    </a>
+                    <p class="text-muted">Carnegie Mellon University</p>
                 </div>
 
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/Huaxiu_Yao.jpg" height="150" width="150"
-                            class="img-responsive img-circle">
-                        <a href="https://www.huaxiuyao.io/">
-                            <h4>Huaxiu Yao</h4>
-                        </a>
-                        <p class="text-muted">UNC-Chapel Hill</p>
-                    </div>
+                <div class="team-member">
+                    <img src="./files_new/Huaxiu_Yao.jpg" class="img-responsive img-circle">
+                    <a href="https://www.huaxiuyao.io/">
+                        <h4>Huaxiu Yao</h4>
+                    </a>
+                    <p class="text-muted">UNC-Chapel Hill</p>
                 </div>
 
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/MB.png" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://www.cs.unc.edu/~mbansal/">
-                            <h4>Mohit Bansal </h4>
-                        </a>
-                        <p class="text-muted">UNC-Chapel Hill</p>
-                    </div>
+                <div class="team-member">
+                    <img src="./files_new/MB.png" class="img-responsive img-circle">
+                    <a href="https://www.cs.unc.edu/~mbansal/">
+                        <h4>Mohit Bansal</h4>
+                    </a>
+                    <p class="text-muted">UNC-Chapel Hill</p>
                 </div>
 
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/BC.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://www.andrew.cmu.edu/user/beidic/">
-                            <h4>Beidi Chen</h4>
-                        </a>
-                        <p class="text-muted">Carnegie Mellon University</p>
-                    </div>
+                <div class="team-member">
+                    <img src="./files_new/BC.jpeg" class="img-responsive img-circle">
+                    <a href="https://www.andrew.cmu.edu/user/beidic/">
+                        <h4>Beidi Chen</h4>
+                    </a>
+                    <p class="text-muted">Carnegie Mellon University</p>
                 </div>
 
-                <div class="col-sm2">
-                    <div class="team-member">
-                        <img src="./files_new/JH.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://junlinhan.github.io/">
-                            <h4>Junlin Han</h4>
-                        </a>
-                        <p class="text-muted">University of Oxford Meta AI</p>
-                    </div>
+                <div class="team-member">
+                    <img src="./files_new/JH.jpg" class="img-responsive img-circle">
+                    <a href="https://junlinhan.github.io/">
+                        <h4>Junlin Han</h4>
+                    </a>
+                    <p class="text-muted">University of Oxford Meta AI</p>
                 </div>
-            </div>
-            <br>
-            <br>
-            <div class="row row-centered ">
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/PI.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://izmailovpavel.github.io/">
-                            <h4>Pavel Izmailov</h4>
-                        </a>
-                        <p class="text-muted">New York University Anthropic</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/PI.jpeg" class="img-responsive img-circle">
+                    <a href="https://izmailovpavel.github.io/">
+                        <h4>Pavel Izmailov</h4>
+                    </a>
+                    <p class="text-muted">New York University Anthropic</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/JL.png" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://peterljq.github.io/">
-                            <h4>Jinqi Luo</h4>
-                        </a>
-                        <p class="text-muted">University of Pennsylvania</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/JL.png" class="img-responsive img-circle">
+                    <a href="https://peterljq.github.io/">
+                        <h4>Jinqi Luo</h4>
+                    </a>
+                    <p class="text-muted">University of Pennsylvania</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/PK.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://koh.pw/">
-                            <h4>Pang Wei Koh</h4>
-                        </a>
-                        <p class="text-muted">University of Washington</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/PK.jpeg" class="img-responsive img-circle">
+                    <a href="https://koh.pw/">
+                        <h4>Pang Wei Koh</h4>
+                    </a>
+                    <p class="text-muted">University of Washington</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/WS.webp" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://weijiashi.notion.site/">
-                            <h4>Weijia Shi</h4>
-                        </a>
-                        <p class="text-muted">University of Washington</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/WS.webp" class="img-responsive img-circle">
+                    <a href="https://weijiashi.notion.site/">
+                        <h4>Weijia Shi</h4>
+                    </a>
+                    <p class="text-muted">University of Washington</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/WQ.jpg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://quwenjie.github.io/">
-                            <h4>Wenjie Qu</h4>
-                        </a>
-                        <p class="text-muted">National University of Singapore</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/WQ.jpg" class="img-responsive img-circle">
+                    <a href="https://quwenjie.github.io/">
+                        <h4>Wenjie Qu</h4>
+                    </a>
+                    <p class="text-muted">National University of Singapore</p>
                 </div>
-            </div>
-            <br>
-            <br>
-            <div class="row row-centered">
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/PhT.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://eng.ox.ac.uk/people/philip-torr/">
-                            <h4>Philip Torr </h4>
-                        </a>
-                        <p class="text-muted">University of Oxford</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/PhT.jpeg" class="img-responsive img-circle">
+                    <a href="https://eng.ox.ac.uk/people/philip-torr/">
+                        <h4>Philip Torr</h4>
+                    </a>
+                    <p class="text-muted">University of Oxford</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/ZW.jpg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://zhaoyang.win/">
-                            <h4>Zhaoyang Wang</h4>
-                        </a>
-                        <p class="text-muted">UNC-Chapel Hill</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/ZW.jpg" class="img-responsive img-circle">
+                    <a href="https://zhaoyang.win/">
+                        <h4>Zhaoyang Wang</h4>
+                    </a>
+                    <p class="text-muted">UNC-Chapel Hill</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/SY.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://sustcsonglin.github.io/">
-                            <h4>Songlin Yang</h4>
-                        </a>
-                        <p class="text-muted">Massachusetts Institute of Technology</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/SY.jpeg" class="img-responsive img-circle">
+                    <a href="https://sustcsonglin.github.io/">
+                        <h4>Songlin Yang</h4>
+                    </a>
+                    <p class="text-muted">Massachusetts Institute of Technology</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/LZ.jpg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://www.cs.washington.edu/people/faculty/luke-zettlemoyer/">
-                            <h4>Luke Zettlemoyer</h4>
-                        </a>
-                        <p class="text-muted">University of Washington Meta</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/LZ.jpg" class="img-responsive img-circle">
+                    <a href="https://www.cs.washington.edu/people/faculty/luke-zettlemoyer/">
+                        <h4>Luke Zettlemoyer</h4>
+                    </a>
+                    <p class="text-muted">University of Washington Meta</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./files_new/JHZ.jpeg" height="150" width="150" class="img-responsive img-circle">
-                        <a href="https://zjhzjh123.github.io/">
-                            <h4>Jiaheng Zhang</h4>
-                        </a>
-                        <p class="text-muted">National University of Singapore</p>
-                    </div>
+
+                <div class="team-member">
+                    <img src="./files_new/JHZ.jpeg" class="img-responsive img-circle">
+                    <a href="https://zjhzjh123.github.io/">
+                        <h4>Jiaheng Zhang</h4>
+                    </a>
+                    <p class="text-muted">National University of Singapore</p>
                 </div>
             </div>
 
