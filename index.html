@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="./favicon.ico">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Workshop on Foundation Models in the Wild at ICLR 2025">
@@ -31,7 +34,8 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -48,93 +52,152 @@
                     </ul>-->
                     <ul class="nav navbar-nav navbar-middle">
                         <li class="hidden active">
-                            <a href="fm-wild-community.github.io/index.html#page-top"></a>
+                            <a href="index.html#page-top"></a>
                         </li>
 
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#" style="left: -80px; font-size:22px;">The 2nd Workshop on Foundation Models in the Wild</a>
+                            <a class="page-scroll" href="index.html#"
+                                style="left: -80px; font-size:22px;">The 2nd Workshop on Foundation Models in the
+                                Wild</a>
                         </li>
                         <li>
                             <a style="padding-left: 20px;"></a>
                         </li>
+
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#introduction">Overview</a>
+                            <a class="page-scroll"
+                                href="index.html#news">News</a>
                         </li>
 
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#call">Call for Papers</a>
+                            <a class="page-scroll"
+                                href="index.html#introduction">About</a>
+                        </li>
+
+                        <li>
+                            <a class="page-scroll" href="index.html#call">Call for
+                                Papers</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#dates">Important Dates</a>
+                            <a class="page-scroll" href="index.html#dates">Important
+                                Dates</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#program">Schedule</a>
+                            <a class="page-scroll" href="index.html#program">Schedule</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#speaker">Invited Speakers</a>
+                            <a class="page-scroll" href="index.html#speaker">Invited
+                                Speakers</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="fm-wild-community.github.io/index.html#organization">Organizers</a>
+                            <a class="page-scroll"
+                                href="index.html#organization">Organizers</a>
                         </li>
                         <li>
-                        <!--<li>
+                            <!--<li>
                             <a class="page-scroll" href="#contactt">Contact</a>
                         </li>-->
-                        </li><li>
+                        </li>
+                        <li>
 
                             <!-- <li>
                         <a class="buttom" href="index_2020.html">TSW 2020</a>
                     </li> -->
 
-                    </li></ul>
+                        </li>
+                    </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
-    </div></nav>
+        </div>
+    </nav>
 
     <!-- Header -->
     <header>
         <style>
             header {
-                background-image: url(img/bggg.jpg);
+                background-image: url(img/bg.avif);
+                background-size: cover;
+                background-position: center;
                 color: #fff;
                 text-align: center;
                 padding: 20px 0;
+                position: relative;
             }
-    
-            .btn {
-        display: inline-block;
-        margin: 10px 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.2); /* 半透明蓝色背景 */
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
 
-    .btn:hover {
-        background-color: rgba(255, 255, 255, 0.45); /* 接近白色的半透明 */
-        color: #fff; /* 悬浮时文字颜色为黑色 */
-    }
+            /* Add a dark overlay to improve text readability */
+            header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.4);
+                /* Semi-transparent dark overlay */
+                z-index: 1;
+            }
+
+            .container {
+                position: relative;
+                z-index: 2;
+                /* Place content above the overlay */
+            }
+
+            .intro-heading, .intro-lead-in {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .intro-heading {
+                font-size: 3.5em;
+                font-weight: bold;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+            .intro-lead-in {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                display: inline-block;
+                margin: 10px 5px;
+                padding: 12px 24px;
+                font-size: 16px;
+                color: #fff;
+                background-color: rgba(255, 255, 255, 0.15);
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(5px);
+            }
+
+            .btn:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
         </style>
-    <div class="container">
-        <br>
-        <div class="intro-text">
-            <div class="intro-heading">Foundation Models in the Wild</div>
+        <div class="container">
             <br>
-            <br>
-            <div class="intro-lead-in">April 27/28, 2025</div>
-            <br>
-            <div class="intro-lead-in">The workshop will be held in a hybrid format.</div>
+            <div class="intro-text">
+                <div class="intro-heading">
+                    <div>ICLR 2025 Workshop on</div>
+                    <div>Foundation Models in the Wild</div>
+                </div>
+                <br>
+                <br>
+                <div class="intro-lead-in">April 27/28, 2025</div>
+                <br>
+                <div class="intro-lead-in">The workshop will be held in a hybrid format.</div>
+            </div>
+            <div class="buttons">
+                <a href="index_2024.html" class="btn">ICML 2024</a>
+            </div>
         </div>
-        <div class="buttons">
-            <a href="index_2024.html" class="btn">ICML 2024</a>
-        </div>
-    </div>
     </header>
     <br><br><br><br>
 
@@ -150,11 +213,13 @@
             <div class="row text-justify">
                 <div class="col-md-12">
                     <p class="large text-muted">
-                        <ul class="large text-muted" ,="" style="float:left; width: 100%"> 
-                            <li>
-                                Started submission at OpenReview: <a href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild</a>
-                            </li>
-                </p> </div>
+                    <ul class="large text-muted" ,="" style="float:left; width: 100%">
+                        <li>
+                            Started submission at OpenReview: <a
+                                href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild</a>
+                        </li>
+                        </p>
+                </div>
     </section>
 
     <!-- Introduction Section -->
@@ -162,21 +227,110 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 ">
-                    <h2 class="section-heading">Overview</h2>
+                    <h2 class="section-heading">About</h2>
                     <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
                 </div>
             </div>
             <div class="row text-justify">
-                <div class="col-md-12">
-                    <p class="large text-muted">
-                        In the era of AI-driven transformations, foundation models (FMs), like large-scale language and vision models, have become pivotal in various applications, from natural language processing to computer vision. These models, with their immense capabilities, reshape the future of scientific research and the broader human society, but also introduce challenges in their in-the-wild deployments. The Workshop on FMs in the wild delves into the urgent need for these models to be useful when applied to our societies. The significance of this topic cannot be overstated, as the real-world implications of these models impact everything from daily information access to critical decision-making in fields like medicine and finance. Stakeholders, from developers to end-users, care deeply about this because the successful integration of FMs into in-the-wild frameworks necessitates a careful consideration of adaptivity, reliability and efficiency. Some of the fundamental questions that this workshop aims to address are:                    </p>
-                    <br>
-                    <ul class="large text-muted" ,="" style="float:left; width: 100%"> 
-                    <li><b>Real-world Adaptation:</b> In practical applications, how can we leverage the comprehensive knowledge in FMs to adapt them for specific domains, such as drug discovery, education, or clinical health?</li>
-                    <li><b>Reliability and Responsibility:</b> How can foundation models work reliably outside their training distribution? And how can we address issues like hallucination and privacy?</li>
-                    <li><b>Safety, Ethics, and Fairness in Society:</b> How do we ensure that the deployment of FMs preserving safety, ethics, and fairness within society, safeguarding against biases and unethical use?</li>
-                    <li><b>Practical Limitations in Deployment:</b> How can FMs tackle challenges in practical applications, such as system constraints, computational costs, data acquisition barriers, response time demands?</li></ul><br>
-                    <p></p><br>
+                <style>
+                    /* 限制CSS作用范围 */
+                    .overview-section {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 40px 20px;
+                    }
+            
+                    .overview-section .intro-text {
+                        font-size: 1.1em;
+                        line-height: 1.8;
+                        color: #444;
+                        margin-bottom: 40px;
+                    }
+            
+                    .overview-section .questions-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 30px;
+                        margin-top: 40px;
+                    }
+            
+                    .overview-section .question-card {
+                        background: #f8f9fa;
+                        border-radius: 12px;
+                        padding: 25px;
+                        transition: transform 0.3s ease;
+                    }
+            
+                    .overview-section .question-card:hover {
+                        transform: translateY(-5px);
+                    }
+            
+                    .overview-section .question-title {
+                        color: #2c5282;
+                        font-size: 1.2em;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        border-bottom: 2px solid #4299e1;
+                        padding-bottom: 8px;
+                    }
+            
+                    .overview-section .question-content {
+                        color: #4a5568;
+                        line-height: 1.6;
+                    }
+                </style>
+                <div class="overview-section">
+                    <div class="intro-text">
+                        In the era of AI-driven transformations, foundation models (FMs) have become pivotal in various
+                        applications, from natural language processing to computer vision. These models, with their
+                        immense capabilities, reshape the future of scientific research and the broader human society, but also introduce
+                        challenges in their in-the-wild deployments. The Workshop on FMs in the wild delves into the urgent
+                        need for these models to be useful when deployed in our societies. The significance of this topic cannot
+                        be overstated, as the real-world implications of these models impact everything from daily information access
+                        to critical decision-making in fields like medicine and finance. Stakeholders, from developers to end-users,
+                        care deeply about this because the successful integration of FMs into in-the-wild frameworks necessitates a
+                        careful consideration of many properties, including adaptivity, reliability, efficiency, and
+                        reasoning ability.
+                    </div>
+            
+                    <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Questions We Aim to Address</h3>
+            
+                    <div class="questions-grid">
+                        <div class="question-card">
+                            <div class="question-title">In-the-wild Adaptation</div>
+                            <div class="question-content">
+                                How can we leverage techniques such as Retrieval-Augmented Generation
+                                (RAG), In-context Learning (ICL), or Fine-tuning (FT) to adapt FMs for specific domains, such as
+                                drug discovery, education, or clinical health?
+                            </div>
+                        </div>
+            
+                        <div class="question-card">
+                            <div class="question-title">Reasoning and Planning</div>
+                            <div class="question-content">
+                                How can FMs be enhanced to tackle more complex in-the-wild tasks that
+                                require multi-step reasoning or decision-making, such as multi-hop question answering, mathematical
+                                problem-solving, theorem proving, code generation, or robot planning scenarios?
+                            </div>
+                        </div>
+            
+                        <div class="question-card">
+                            <div class="question-title">Reliability and Responsibility</div>
+                            <div class="question-content">
+                                How can FMs work reliably outside their training distribution?
+                                And how can we address issues like hallucination, fairness, ethics, safety and privacy within the society?
+                            </div>
+                        </div>
+            
+                        <div class="question-card">
+                            <div class="question-title">Practical Limitations in Deployment</div>
+                            <div class="question-content">
+                                How can FMs tackle challenges in practical applications,
+                                such as system constraints, memory requirements, response time demands, data acquisition barriers,
+                                and computational costs for inference-time scaling and long-context input?
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,41 +349,84 @@
                         <div class="col-md-12">
 
 
-                            <p class="large text-muted">We invite submissions from researchers in the fields of machine learning pertaining to foundation models and its in-the wild applications. Additionally, we welcome contributions from scholars in the natural sciences (such as physics, chemistry, and biology) and social sciences (including pedagogy and sociology) that necessitate the use of foundation models. In summary, our topics of interest include, but are not limited to:</p>
+                            <p class="large text-muted">We invite submissions from researchers in the fields of machine
+                                learning pertaining to foundation models and its in-the wild applications. Additionally,
+                                we welcome contributions from scholars in the natural sciences (such as physics,
+                                chemistry, and biology) and social sciences (including pedagogy and sociology) that
+                                necessitate the use of foundation models. In summary, our topics of interest include,
+                                but are not limited to:</p>
 
                             <ul class="large text-muted" style="float:left; width: 100%">
                                 <li>Theoretical foundations of FMs in the wild</li>
                                 <li>Empirical investigations into the in-the-wild deployments of various FMs</li>
                                 <li>In-depth discussions exploring new applications of FMs in human society</li>
                                 <li>Interventions during pre-training to enhance the downstream performance of FMs</li>
-                                <li>Innovations in fine-tuning processes to bolster the adaptation of FMs to particular domains</li>
-                                <li>Discussions on aligning models with potentially superhuman capabilities to human values</li>
-                                <li>Advancements in the efficient fine-tuning and deployment of FMs to specific applications</li>
+                                <li>Innovations in fine-tuning processes to bolster the adaptation of FMs to particular
+                                    domains</li>
+                                <li>Discussions on aligning models with potentially superhuman capabilities to human
+                                    values</li>
+                                <li>Advancements in the efficient fine-tuning and deployment of FMs to specific
+                                    applications</li>
                                 <li>Benchmark methodologies for assessing FMs in real-world settings</li>
-                                <li>Issues of adaptivity, reliability and efficiency of FMs in broad applications</li></ul>
-                            <p class="large text-muted"><mybold>Submission URL:</mybold> &nbsp; <a href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild
-</a></p>
-                            <p class="large text-muted"><mybold>Format:</mybold> &nbsp;All submissions must be in PDF format. Submissions are either in tiny paper format (<b>2 pages</b>) or long paper format (<b>6 - 10 pages</b>) including all figures and tables; unlimited additional pages containing references and supplementary materials are allowed. Reviewers may choose to read the supplementary materials but will not be required to.
+                                <li>Issues of adaptivity, reliability and efficiency of FMs in broad applications</li>
+                            </ul>
+                            <p class="large text-muted">
+                                <mybold>Submission URL:</mybold> &nbsp; <a
+                                    href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild">https://openreview.net/group?id=ICLR.cc/2025/Workshop/FM-Wild
+                                </a>
                             </p>
-                            <p class="large text-muted"><mybold>Style file:</mybold> &nbsp; You must format your submission using the ICLR 2025 LaTeX style file. For your convenience, we have modified the main conference style file to refer to the FM-WILD workshop: <a href="iclr_fmwild.sty">iclr_fmwild.sty</a>. Please include the references and supplementary materials in the same PDF as the main paper. The maximum file size for submissions is 50MB. Submissions that violate the ICLR style (e.g., by decreasing margins or font sizes) or page limits may be rejected without further review.
+                            <p class="large text-muted">
+                                <mybold>Format:</mybold> &nbsp;All submissions must be in PDF format. Submissions are
+                                either in tiny paper format (<b>2 pages</b>) or long paper format (<b>6 - 10 pages</b>)
+                                including all figures and tables; unlimited additional pages containing references and
+                                supplementary materials are allowed. Reviewers may choose to read the supplementary
+                                materials but will not be required to.
                             </p>
-                            <p class="large text-muted"><mybold>Dual-submission policy:</mybold> &nbsp;We welcome ongoing and unpublished work. We will also accept papers that are under review at the time of submission, or that have been recently accepted without published proceedings.
+                            <p class="large text-muted">
+                                <mybold>Style file:</mybold> &nbsp; You must format your submission using the ICLR 2025
+                                LaTeX style file. For your convenience, we have modified the main conference style file
+                                to refer to the FM-WILD workshop: <a href="iclr_fmwild.sty">iclr_fmwild.sty</a>. Please
+                                include the references and supplementary materials in the same PDF as the main paper.
+                                The maximum file size for submissions is 50MB. Submissions that violate the ICLR style
+                                (e.g., by decreasing margins or font sizes) or page limits may be rejected without
+                                further review.
                             </p>
-                            <p class="large text-muted"><mybold>Non-archival:</mybold> &nbsp;The workshop is a non-archival venue and will not have official proceedings. Workshop submissions can be subsequently or concurrently submitted to other venues.
+                            <p class="large text-muted">
+                                <mybold>Dual-submission policy:</mybold> &nbsp;We welcome ongoing and unpublished work.
+                                We will also accept papers that are under review at the time of submission, or that have
+                                been recently accepted without published proceedings.
                             </p>
-                            <p class="large text-muted"><mybold>Visibility:</mybold> &nbsp;Submissions and reviews will not be public. Only accepted papers will be made public.
+                            <p class="large text-muted">
+                                <mybold>Non-archival:</mybold> &nbsp;The workshop is a non-archival venue and will not
+                                have official proceedings. Workshop submissions can be subsequently or concurrently
+                                submitted to other venues.
                             </p>
-                            <p class="large text-muted"><mybold>Double-blind reviewing:</mybold> &nbsp; All submissions must be anonymized and may not contain any identifying information that may violate the double-blind reviewing policy.  This policy applies to any supplementary or linked material as well, including code.  If you are including links to any external material, it is your responsibility to guarantee anonymous browsing.  Please do not include acknowledgements at submission time. If you need to cite one of your own papers, you should do so with adequate anonymization to preserve double-blind reviewing. Any papers found to be violating this policy will be rejected.
+                            <p class="large text-muted">
+                                <mybold>Visibility:</mybold> &nbsp;Submissions and reviews will not be public. Only
+                                accepted papers will be made public.
                             </p>
-                            <p class="large text-muted">For any questions, please contact us at <a href="mailto:fmwild2025@googlegroups.com">fmwild2025@googlegroups.com</a>.
+                            <p class="large text-muted">
+                                <mybold>Double-blind reviewing:</mybold> &nbsp; All submissions must be anonymized and
+                                may not contain any identifying information that may violate the double-blind reviewing
+                                policy. This policy applies to any supplementary or linked material as well, including
+                                code. If you are including links to any external material, it is your responsibility to
+                                guarantee anonymous browsing. Please do not include acknowledgements at submission time.
+                                If you need to cite one of your own papers, you should do so with adequate anonymization
+                                to preserve double-blind reviewing. Any papers found to be violating this policy will be
+                                rejected.
+                            </p>
+                            <p class="large text-muted">For any questions, please contact us at <a
+                                    href="mailto:fmwild2025@googlegroups.com">fmwild2025@googlegroups.com</a>.
                             </p>
                             <br>
                         </div>
                     </div>
 
                 </div>
-    </div></div></section>
-    
+            </div>
+        </div>
+    </section>
+
 
     <!-- Dates Section -->
     <section id="dates">
@@ -255,7 +452,7 @@
                             </p>
                             <p class="large text-muted">
                                 <b>Camera-ready deadline: March 20, 2025, AOE
-                            </p> 
+                            </p>
                             <!-- <p class="large text-muted">
                                 <b>Workshop Date: July 26, 2024, AOE                           </p> -->
                         </ul>
@@ -279,7 +476,7 @@
                 </div>
             </div>
             <p class="large text-muted">
-            This is the tentative schedule of the workshop. All slots are provided in local time. 
+                This is the tentative schedule of the workshop. All slots are provided in local time.
             </p>
             <div id="schedule">
                 <div class="container w">
@@ -291,28 +488,35 @@
                                     <td>08:50 - 09:00</td>
                                     <td>Introduction and opening remarks</td>
                                 </tr>
-                            <tr>
+                                <tr>
                                     <td>09:00 - 09:30 </td>
                                     <td>Invited Talk 1</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>09:30 - 10:00 </td>
                                     <td>Invited Talk 2</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>10:00 - 10:15</td>
                                     <td>Contributed Talk 1</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>10:15 - 11:15 </td>
                                     <td>Poster Session 1</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>11:15 - 11:45 </td>
                                     <td>Invited Talk 3</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>11:45 - 12:15 </td>
                                     <td>Invited Talk 4</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>12:15 - 13:30 </td>
                                     <td>Break</td>
-                                </tr></tbody>
+                                </tr>
+                            </tbody>
 
                         </table>
                     </div>
@@ -323,28 +527,36 @@
                                 <tr>
                                     <td>13:30 - 14:00</td>
                                     <td>Invited Talk 5</td>
-                               </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>14:00 - 14:30</td>
                                     <td>Invited Talk 6</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>14:30 - 14:45</td>
                                     <td>Contributed Talk 2</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>14:45 - 15:45</td>
                                     <td>Poster Session 2</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>15:45 - 16:15</td>
                                     <td>Invited Talk 7</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>16:15 - 16:30</td>
                                     <td>Contributed Talk 3</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>16:30 - 17:00</td>
                                     <td>Invited Talk 8</td>
-                                </tr><tr>
+                                </tr>
+                                <tr>
                                     <td>17:00 - 18:00</td>
                                     <td>Panel discussion</td>
-                                </tr></tbody>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -353,7 +565,8 @@
                     </div>
                 </div>
             </div>
-    </div></section>
+        </div>
+    </section>
 
     <!-- Speaker Section -->
     <section id="speaker">
@@ -446,15 +659,22 @@
                     </div>
                 </div>
                 <div class="col-sm-2">
-            
+
                 </div>
             </div>
-            </div>
-
-                                             
+        </div>
 
 
-    </div></div></div></div></div></div></div></section>
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
 
 
     <section id="organization">
@@ -474,13 +694,13 @@
                     margin-bottom: 10px;
                     /* 减少行之间的距离 */
                 }
-    
+
                 .team-member {
                     text-align: center;
                     margin-bottom: 15px;
                     /* 减少每个成员卡片的底部间距 */
                 }
-    
+
                 /* 移除多余的间距 */
                 .container br {
                     display: none;
@@ -496,17 +716,18 @@
                         <p class="text-muted">Carnegie Mellon University</p>
                     </div>
                 </div>
-    
+
                 <div class="col-sm-2">
                     <div class="team-member">
-                        <img src="./files_new/Huaxiu_Yao.jpg" height="150" width="150" class="img-responsive img-circle">
+                        <img src="./files_new/Huaxiu_Yao.jpg" height="150" width="150"
+                            class="img-responsive img-circle">
                         <a href="https://www.huaxiuyao.io/">
                             <h4>Huaxiu Yao</h4>
                         </a>
                         <p class="text-muted">UNC-Chapel Hill</p>
                     </div>
                 </div>
-    
+
                 <div class="col-sm-2">
                     <div class="team-member">
                         <img src="./files_new/MB.png" height="150" width="150" class="img-responsive img-circle">
@@ -516,7 +737,7 @@
                         <p class="text-muted">UNC-Chapel Hill</p>
                     </div>
                 </div>
-    
+
                 <div class="col-sm-2">
                     <div class="team-member">
                         <img src="./files_new/BC.jpeg" height="150" width="150" class="img-responsive img-circle">
@@ -526,7 +747,7 @@
                         <p class="text-muted">Carnegie Mellon University</p>
                     </div>
                 </div>
-    
+
                 <div class="col-sm-2">
                     <div class="team-member">
                         <img src="./files_new/JH.jpeg" height="150" width="150" class="img-responsive img-circle">
@@ -638,14 +859,23 @@
 
 
 
-                                            
 
-    <div class="container">
-            <div class="row">
-                
+
+            <div class="container">
+                <div class="row">
+
+                </div>
             </div>
-    </div>
-    </div></div></div></div></div></div></div></div></div></section>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
 
     <!-- <section id="sponsor">
         <div class="container">
@@ -690,7 +920,7 @@
 
 
 
-<!--     <section id="contact">
+    <!--     <section id="contact">
         <br class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -713,7 +943,7 @@
 
 
 
-        <!-- </div> -->
+    <!-- </div> -->
     <!-- </section> -->
 
 
@@ -739,4 +969,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
